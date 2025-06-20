@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew test
 
       - name: Archive JAR as Artifact (optional)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: backend-app-jar
           path: build/libs/*.jar

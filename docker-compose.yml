@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: fazlullahb/backend-app:latest
+    container_name: backend-app
+    ports:
+      - "8081:8008"
+    restart: unless-stopped
+
+  frontend:
+    image: fazlullahb/frontend-app:latest
+    container_name: frontend-app
+    ports:
+      - "4200:80"
+    restart: unless-stopped
+    depends_on:
+      - backend
